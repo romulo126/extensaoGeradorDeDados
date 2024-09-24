@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Dados</title>
+    <script src="/js/popup.js"></script>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+        }
+        .data-field {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .data-label {
+            font-weight: bold;
+        }
+        .data-value {
+            margin-left: 5px;
+        }
+        .copiado {
+            color: green;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.dark-mode button {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            border: 1px solid #333333;
+        }
+        .gender-selection {
+            margin-bottom: 10px;
+        }
+        .gender-selection label {
+            margin-right: 10px;
+        }
+        .dark-mode-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/img/dark-mode-icon.svg" alt="Alternar Modo" class="dark-mode-toggle" id="darkModeToggle">
+    
+    <div class="gender-selection">
+        <label><input type="radio" name="gender" value="masculino" checked> Masculino</label>
+        <label><input type="radio" name="gender" value="feminino"> Feminino</label>
+    </div>
+
+    <div class="data-field" id="campo-nome">
+        <span class="data-label">Nome:</span>
+        <span class="data-value" id="nome"></span>
+    </div>
+    <div class="data-field" id="campo-nome-mae">
+        <span class="data-label">Nome da Mãe:</span>
+        <span class="data-value" id="nomeMae"></span>
+    </div>
+    <div class="data-field" id="campo-cpf">
+        <span class="data-label">CPF:</span>
+        <span class="data-value" id="cpf"></span>
+    </div>
+    <div class="data-field" id="campo-telefone">
+        <span class="data-label">Telefone:</span>
+        <span class="data-value" id="telefone"></span>
+    </div>
+    <div class="data-field" id="campo-email">
+        <span class="data-label">E-mail:</span>
+        <span class="data-value" id="email"></span>
+    </div>
+    <div class="data-field" id="campo-cep">
+        <span class="data-label">CEP:</span>
+        <span class="data-value" id="cep"></span>
+    </div>
+    <button id="gerar">Gerar Novos Dados</button>
+</body>
+</html>
